@@ -1,28 +1,23 @@
-{%set name = "flask-cache" %}
-{%set camelName = "Flask-Cache" %}
-{%set version = "0.13.1" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "90126ca9bc063854ef8ee276e95d38b2b4ec8e45fd77d5751d37971ee27c7ef4" %}
+{% set version = "0.13.1" %}
 
 package:
-  name: {{ name }}
+  name: flask-cache
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ camelName }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/F/Flask-Cache/Flask-Cache-{{ version }}.tar.gz
+  sha256: 90126ca9bc063854ef8ee276e95d38b2b4ec8e45fd77d5751d37971ee27c7ef4
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - flask
-
   run:
     - python
     - flask
@@ -34,8 +29,10 @@ test:
 about:
   home: http://github.com/thadeusb/flask-cache
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: 'Adds cache support to your Flask application'
 
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - ocefpaf
