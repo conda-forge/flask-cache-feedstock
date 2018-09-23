@@ -14,9 +14,8 @@ Summary: Adds cache support to your Flask application
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/flask-cache-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/flask-cache-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/flask-cache-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/flask-cache-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/flask-cache-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/flask-cache-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/flask-cache-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/flask-cache-feedstock)
 
 Current release info
 ====================
